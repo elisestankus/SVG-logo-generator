@@ -10,6 +10,11 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'textColor',
+        message: 'What color would you like your text to be?',
+    },
+    {
+        type: 'input',
         name: 'color',
         message: 'What color would you like your logo to be?',
     },
