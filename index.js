@@ -20,3 +20,15 @@ const questions = [
         choices: ['Circle', 'Triangle', 'Square']
     }
 ]
+
+function init() {
+    inquirer
+        .prompt(questions)
+        .then((data) => {
+            const pageContent = generateLogo(data)
+
+            fs.writeFile('logo.svg', pageContent, (err) => err ? console.log(err) : console.log('Generated logo.svg'))
+        })
+}
+
+init();
